@@ -1,11 +1,15 @@
-var card = document.querySelector(".filling");
-var body = document.querySelector(".card-body");
-var background = document.querySelector(".weight")
-var cardhead = document.querySelector(".card-head");
-var cardcorner = document.querySelector(".card-corner")
-var description = document.getElementById('fff')
-var link = document.getElementById('buy')
+var cards = document.querySelectorAll(".card");
 
+cards.forEach(function(cardDiv){
+
+var card = cardDiv.querySelector(".filling");
+var body = cardDiv.querySelector(".card-body");
+var background = cardDiv.querySelector(".weight")
+var cardhead = cardDiv.querySelector(".card-head");
+var cardcorner = cardDiv.querySelector(".card-corner")
+var description = cardDiv.querySelector('#fff')
+var link = cardDiv.querySelector('#buy')
+/*
 function changeText() {
   if (card.classList.contains('filling','lolo')) {
     description.innerHTML='Чего сидишь?';
@@ -13,7 +17,7 @@ function changeText() {
     console.log('dura');
   }
 }
-
+*/
 
 card.addEventListener("click", function(event) {
   event.preventDefault();
@@ -26,9 +30,7 @@ card.addEventListener("click", function(event) {
     card.classList.toggle('selected');
     card.classList.add('lolo');
   }
-
-
-
+});
 });
 
 
